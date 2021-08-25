@@ -1,0 +1,82 @@
+.carousel {
+    /* border: solid 2px red; */
+    position: relative;
+    height: 600px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.carousel__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* avoids stretching of img, will crop based on vw*/
+}
+
+.carousel__track-container {
+    background: lightgreen;
+    /* padding: 10px; */
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.carousel-track {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+
+.carousel__slide {
+    position: absolute; 
+    top: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.carousel__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* moves btn up along Y axis by 50% of its height*/
+    background: transparent;
+    border: 2px solid black;
+    cursor: pointer;
+}
+
+.carousel__btn--left {
+    left: -80px;
+}
+
+.carousel__btn--right {
+    right: -80px;
+}
+
+.carousel__nav {
+    /* background: pink; */
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 0;
+}
+
+.carousel__indicator {
+    border: 0;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: rgb(0, 0, 0, .3);
+    color: white;
+    cursor: pointer;
+}
+
+
+.carousel__indicator.current-slide {
+    background: rgba(0, 0, 0, .75);
+}
+
+
+.is-hidden {
+    display: none;
+}
